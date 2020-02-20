@@ -103,7 +103,7 @@
 }
 
 .hero-img {
-   background-image: url(../img/hero-img.png);
+   background-image: url(../img/hero.jpg);
 }
 
 .page-cont {
@@ -152,7 +152,7 @@ a {
    background-position: center center;
    background-size: cover;
 
-   background-image: url(../img/events-img.png);
+   background-image: url(../img/events.jpg);
 }
 
 .event-head {
