@@ -4,23 +4,90 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Game of Apps</title>
-
-   <link href="css/main.css" type="text/css" rel="stylesheet">
+    <!-- Link to CSS file -->
+   <link href="/css/main.css" type="text/css" rel="stylesheet">
 </head>
-<body>
 
-   <h1>Game of Apps</h1>
-<!-- Header -->
-   <header class="header hero-img">
-      <div class="page-cont">
-         <div class="header-text-cont">
-            <div class="big-title">App Design & Development Competition</div>
+<body id="page-top">
+    <!-- Nav Bar -->
+    <nav id="navbar" class="sticky">
+        <div class="navbar-cont">
+            <a href="#page-top" class="navbar-logo"><img id="logo" src="img/goa-logo.png"></a>
+            <ul class="nav-item-cont">
+                <li class="nav-item"><a href="#page-top" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link btn-small">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Hero - Header -->
+    <header class="header hero-img">
+        <div class="page-cont">
+            <div class="header-text-cont">
+            <div class="header-title">App Design & Development Competition</div>
             <a class="header-btn" href="#events">View Upcoming Events</a>
-         </div>
-      </div>
-   </header>
+            </div>
+        </div>
+    </header>
 
-<!-- Events -->
+    <!-- About -->
+    <section id="about" class="white-text">
+        <div class="section-heading-cont">
+            <h1 class="section-title">What is Game of Apps</h1>
+            <h3 class="section-subtitle">Here's our story</h3>
+        </div>
+        <div class="about-cont">
+            <div class="half-col">
+                <p>Game of Apps is a program that guides high school students through the whole process of building apps from beginning to end. Local professional designers and developers mentor the students weekly and teach them how to use the same tools, techniques and processes as used by the industry while the students learn to build mobile apps.</p>
+                <br>
+                <p>The 24-week program culminates with the student teams pitching their apps and demoing to a panel of judges. The top teams from each school district will go on to compete against other school districts for the provincial titles.</p>
+                <br>
+                <p>Season 3 of Game of Apps will start in the near future and will be run concurrently in five school districts—Vancouver, Richmond, New Westminster, West Vancouver, North Vancouver.</p>
+            </div>
+            <div class="half-col">
+                <div class="video-cont">
+                    <iframe type="text/html" width="640" height="360"
+                    src="https://www.youtube.com/embed/EfeeXLBC8H4?autoplay=0"
+                    frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="section-heading-cont">
+            <h1 class="section-title">What You'll Learn</h1>
+            <h3 class="section-subtitle">Build an app from scratch!</h3>
+        </div>
+        <div class="services-cont">
+            <div class="service-item-cont">
+                <div class="service-img"><img src="/img/mentors.png"></div>
+                <h4 class="service-heading">Industry Mentors</h4>
+                <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
+            </div>
+            <div class="service-item-cont">
+                <div class="service-img"><img src="/img/design.png"></div>
+                <h4 class="service-heading">Design Thinking</h4>
+                <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
+            </div>
+            <div class="service-item-cont">
+                <div class="service-img"><img src="/img/development.png"></div>
+                <h4 class="service-heading">Agile Software Development</h4>
+                <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
+            </div>
+            <div class="service-item-cont">
+                <div class="service-img"><img src="/img/awards.png"></div>
+                <h4 class="service-heading">Pitch, Demo & Awards</h4>
+                <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
+            </div>
+        </div>
+    </section>
+  
+  <!-- Events -->
    <section id="events">
       <!-- Image -->
       <div class="events event-img">
@@ -93,11 +160,9 @@
 
          </div>
       </div>
-
-
    </section>
 
-   
+   <!-- Link to JS file -->
    <script src="/js/main.js"></script>
 </body>
 </html>
