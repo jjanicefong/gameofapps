@@ -5,68 +5,22 @@
    box-sizing: border-box;
 }
 
-/* Header */
-.header {
-   background-color: aliceblue;
-   width: 100vw;
-   height: 80vh;
-   background-color: beige;
-
-   background-repeat: no-repeat;
-   background-attachment: scroll;
-   background-position: center center;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-}
-
-.hero-img {
-   position: absolute;
-   background-image: url(../img/hero-img.png);
-   z-index: 1;
-}
-
-.page-cont {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-   top: 30vh;
-}
-
-.header-text-cont {
-   text-align: center;
-   line-height: 4em;
-   width: 60vw;
-}
-
-.header-title {
-   text-transform: uppercase;
-   font-size: 3em;
-   color: #fff;
-   margin-bottom: 1.3em;
-}
-
-a {
-   text-decoration: none;
-}
-
-.header-btn {
-   background-color: #f79e6b;
-   padding: 15px;
-   border-radius: 0.5em;
-   color: #fff;
-   font-size: 1.2em;
-}
-
+/* ========================================================= */
 /* Nav Bar */
+/* ========================================================= */
 #navbar {
     display: flex;
+    top: 0;
     width: 100vw;
     justify-content: center;
     padding: 1em 0;
     background-color: rgba(0,0,0,0.75);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #logo {
@@ -118,7 +72,67 @@ a {
     background-color: #ff8f4f;
 }
 
+/* ========================================================= */
+/* Header */
+/* ========================================================= */
+.header {
+   background-color: aliceblue;
+   width: 100vw;
+   height: 100vh;
+   background-color: beige;
+
+   background-repeat: no-repeat;
+   background-attachment: scroll;
+   background-position: center center;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+.hero-img {
+   background-image: url(../img/hero-img.png);
+   z-index: 1;
+}
+
+.page-cont {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 45vh;
+}
+
+.header-text-cont {
+   text-align: center;
+   line-height: 4em;
+   width: 60vw;
+}
+
+.header-title {
+   text-transform: uppercase;
+   font-size: 3em;
+   color: #fff;
+   margin-bottom: 1.3em;
+}
+
+a {
+   text-decoration: none;
+}
+
+.header-btn {
+   background-color: #f79e6b;
+   padding: 15px;
+   border-radius: 0.5em;
+   color: #fff;
+   font-size: 1.2em;
+}
+
+
+
+/* ========================================================= */
 /* Section Heading - General */
+/* ========================================================= */
 .section-heading-cont {
     text-align: center;
     margin-bottom: 5em;
@@ -137,7 +151,9 @@ a {
     color: white;
 }
 
+/* ========================================================= */
 /* About */
+/* ========================================================= */
 #about {
     display: flex;
     width: 100vw;
@@ -176,7 +192,9 @@ a {
 	height: 100%;
 }
 
+/* ========================================================= */
 /* Services */
+/* ========================================================= */
 #services {
     display: flex;
     width: 100vw;
