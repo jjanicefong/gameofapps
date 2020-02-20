@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|VT323&display=swap');
+
 /* Reset */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'VT323', 'Open Sans', sans-serif;
+}
+
+p {
+    line-height: 1.75;
 }
 
 /* ========================================================= */
@@ -25,7 +39,7 @@
 }
 
 #logo {
-    width: 75%;
+    width: 45%;
     height: auto;
 }
 
@@ -44,9 +58,8 @@
 
 .nav-item {
     list-style-type: none;
-    font-size: 1.25em;
-
-    margin: 0 0.75em;
+    font-size: 1em;
+    margin: 0 1em;
 }
 
 .nav-item:last-child {
@@ -65,7 +78,7 @@
 .btn-small {
     background-color: #f79e6b;
     border-radius: 0.5em;
-    padding: 15px 25px;
+    padding: 12px 25px;
 }
 
 .btn-small:hover {
@@ -101,7 +114,7 @@
    justify-content: center;
    align-items: center;
    position: relative;
-   top: 45vh;
+   top: 42vh;
 }
 
 .header-text-cont {
@@ -111,10 +124,11 @@
 }
 
 .header-title {
-   text-transform: uppercase;
-   font-size: 3em;
-   color: #fff;
-   margin-bottom: 1.3em;
+    font-family: 'VT323', 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5em;
+    color: #fff;
+    margin-bottom: 0.75em;
 }
 
 a {
@@ -122,14 +136,18 @@ a {
 }
 
 .header-btn {
-   background-color: #f79e6b;
-   padding: 15px;
-   border-radius: 0.5em;
-   color: #fff;
-   font-size: 1.2em;
+    font-size: 1.2em;
+    color: #fff;
+
+    background-color: #f79e6b;
+    border-radius: 0.5em;
+    padding: 15px 25px;
 }
 
-
+.header-btn:hover {
+    color: white !important;
+    background-color: #ff8f4f;
+}
 
 /* ========================================================= */
 /* Section Heading - General */
@@ -140,16 +158,26 @@ a {
 }
 
 .section-title {
-    font-size: 2.5em;
+    font-size: 3.5em;
+    letter-spacing: 0.075em;
     text-transform: uppercase;
+    margin-bottom: 0.15em;
 }
 
 .section-subtitle {
-    font-size: 1.25em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 100;
+    text-transform: capitalize;
+    letter-spacing: 0.01em;
 }
 
 .white-text {
     color: white;
+}
+
+.orange-text {
+    color: #f79e6b;
 }
 
 /* ========================================================= */
@@ -171,7 +199,6 @@ a {
     width: 85vw;
     flex-direction: row;
     justify-content: space-evenly;
-    /* border: 2px solid red; */
 }
 
 .half-col {
@@ -232,12 +259,14 @@ a {
 }
 
 .service-heading {
-    font-size: 1.3em;
+    font-size: 1.6em;
+    letter-spacing: 0.05em;
 
-    margin-top: 1em;
+    margin-top: 1.2em;
     margin-bottom: 0.5em;
 }
 
 .service-text {
     width: 90%;
+    font-size: 0.9em;
 }
