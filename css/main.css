@@ -59,3 +59,61 @@ a {
    color: #fff;
    font-size: 1.2em;
 }
+
+/* Nav Bar */
+#navbar {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    padding: 1em 0;
+    background-color: rgba(0,0,0,0.75);
+}
+
+#logo {
+    width: 75%;
+    height: auto;
+}
+
+.navbar-cont {
+    display: flex;
+    width: 95vw;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item-cont {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-item {
+    list-style-type: none;
+    font-size: 1.5em;
+
+    margin: 0 0.75em;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #f79e6b;
+}
+
+.btn-small {
+    background-color: #f79e6b;
+    border-radius: 0.5em;
+    padding: 15px 25px;
+}
+
+.btn-small:hover {
+    color: white !important;
+    background-color: #ff8f4f;
+}
