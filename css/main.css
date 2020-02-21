@@ -374,7 +374,49 @@ a {
     transform: rotateY(180deg);
   }
 
-/* ========================================================= */
+ /* ========================================================= */
+ /* Donate */
+ /* ========================================================= */
+.other-amount {
+    position: relative;
+    top: 6em;
+    margin-bottom: 20em;
+    padding: 15px 25px;
+}
+
+.donate-input {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 15px 25px;
+    position: relative;
+}
+
+.donate-btn {
+    font-size: 1.2em;
+    color: #fff;
+
+    background-color:#343a40;
+    padding: 15px 25px;
+}
+
+.dollar-btn {
+    font-size: 1.2em;
+    color: #fff;
+
+    background-color:#343a40;
+    border-radius: 0.5em;
+    padding: 15px 25px;
+    position: relative;
+    top: 3em; 
+    margin: .5em;
+}
+
+.dollar-btn:hover {
+    color: white !important;
+    background-color: #ff8f4f;
+}
+
+ /* ========================================================= */
  /* Contact Us Footer */
  /* ========================================================= */
 
