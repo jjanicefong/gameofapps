@@ -373,3 +373,30 @@ a {
     color: white;
     transform: rotateY(180deg);
   }
+
+/* ========================================================= */
+ /* Contact Us Footer */
+ /* ========================================================= */
+
+ .footer {
+     background-color: #f79e6b;
+     position: relative;
+     bottom:0;
+     padding: 2em;
+ }
+
+ .send-btn {
+    font-size: 1.2em;
+    color: #fff;
+
+    background-color:#343a40;
+    border-radius: 0.5em;
+    padding: 15px 25px;
+    position: relative;
+    top: 3em;
+}
+
+.send-btn:hover {
+    color: white !important;
+    background-color: #ff8f4f;
+}
