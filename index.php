@@ -128,23 +128,59 @@
 
   <!-- Events -->
    <section id="events">
-      <!-- Image -->
-      <div class="events event-img">
-         <div class="page-cont">
-            <div class="header-title">Upcoming Events</div>
-         </div>
-      </div>
+    <!-- Image -->
+    <div class="events event-img">
+        <div class="page-cont">
+        <div class="header-title">Upcoming Events</div>
+        </div>
+    </div>
 
-      <!-- Container -->
-      <div class="section-heading-cont event-head">
-         <h1 class="section-title">Dates & <span class="orange-text">Locations</span></h1>
-         <h3 class="section-subtitle">Join us for the Season 2 showcase & championship events <br> Attend one or all of the following events to support our local high school teams!</h3>
-      </div>
+    <!-- Container -->
+    <div class="section-heading-cont event-head">
+        <h1 class="section-title">Dates & <span class="orange-text">Locations</span></h1>
+        <h3 class="section-subtitle">Join us for the Season 2 showcase & championship events <br> Attend one or all of the following events to support our local high school teams!</h3>
+    </div>
+    <!-- Create Event Container -->
+    <div class="section-heading-cont">
+        <!-- Create Event Button -->
+        <a class="header-btn" onclick="ShowEventForm(this)" data-status="open" id="createEvent-btn">Create Event</a>
+        <!-- Create Event Form -->
+        <br>
+        <div id="event-form-cont">
+            <div class="event-form">
+                <form action="" method="POST">
+                    <div class="event-field">
+                        <!-- City -->
+                        <label class="event-label" for="city">City</label>
+                        <input class="event-input" type="text" placeholder="Enter City Name" name="city" required>
+                    </div>
+                    <div class="event-field">
+                        <!-- School District # -->
+                        <label class="event-label" for="district">School District #</label>
+                        <input class="event-input" type="number" placeholder="Enter School District #" name="district" required>
+                    </div>
+                    <div class="event-field">
+                        <!-- Event Type -->
+                        <label class="event-label" for="event-type">Event Type</label>
+                        <input class="event-input" type="text" placeholder="Enter Event Type" name="event-type" required>
+                    </div>
+                    <div class="event-field">
+                        <!-- Details -->
+                        <label class="event-label" for="details">Date, Time & Location</label>
+                        <input class="event-input" type="text" placeholder="Enter Event Details" name="details" required>
+                    </div>
+                    <br>
+                    <!-- Post Button -->
+                    <button type="submit" name="create-button" class="btn-small event-btn">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
       <!-- Locations -->
       <div id="location">
          <div class="location-cont">
-            <!-- cards  -->
+            <!-- Cards  -->
             <div class="flip-card">
                <div class="flip-card-inner">
                   <div class="flip-card-front">
