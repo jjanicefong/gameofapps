@@ -86,6 +86,13 @@ p {
     background-color: #ff8f4f;
 }
 
+#nav-username {
+    color: #f79e6b;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
 /* ========================================================= */
 /* Login Modal */
 /* ========================================================= */
@@ -167,6 +174,15 @@ p {
 .modal-button:hover {
     background-color: #ff8f4f;
     opacity: 0.9;
+}
+
+.signup-button {
+    background-color: rgb(145, 145, 145);
+}
+
+.signup-button:hover {
+    background-color: rgb(122, 122, 122);
+    color: white;
 }
 
 /* Add Zoom Animation */

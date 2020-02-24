@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    <?php
+        require 'php/database.php';
+    ?>
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Game of Apps</title>
     <!-- Link to CSS file -->
-   <link href="/css/main.css" type="text/css" rel="stylesheet">
+   <link href="css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -18,7 +23,14 @@
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>
+                <!-- <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li> -->
+                <?php
+                    if(isset($_POST['username'])){
+                        echo '<li class="nav-item"><span id="nav-username">'.$_POST['username'].'</span></li>';
+                    }else{
+                        echo '<li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>';
+                    }
+                ?>
             </ul>
         </div>
     </nav>
@@ -30,7 +42,7 @@
             <div class="modal-image">
                 <!-- Close Button -->
                 <span class="close" title="Close Modal" onclick="CloseLoginModal()">&times;</span>
-                <img class="modal-logo" src="/img/goa-logo.png" alt="Game of Apps Logo">
+                <img class="modal-logo" src="img/goa-logo.png" alt="Game of Apps Logo">
             </div>
             <div class="modal-cont">
                 <!-- Username -->
@@ -43,7 +55,9 @@
                 <br>
                 <br>
                 <!-- Login Button -->
-                <button type="submit" class="modal-button">Login</button>
+                <button type="submit" class="modal-button" name="login-button">Login</button>
+                <!-- Signup Button -->
+                <button type="submit" class="modal-button signup-button" name="signup-button">Sign Up</button>
             </div>
         </form>
     </div>
@@ -90,22 +104,22 @@
         </div>
         <div class="services-cont">
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/mentors.png"></div>
+                <div class="service-img"><img src="img/mentors.png"></div>
                 <h4 class="service-heading">Industry Mentors</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/design.png"></div>
+                <div class="service-img"><img src="img/design.png"></div>
                 <h4 class="service-heading">Design Thinking</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/development.png"></div>
+                <div class="service-img"><img src="img/development.png"></div>
                 <h4 class="service-heading">Agile Software Development</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/awards.png"></div>
+                <div class="service-img"><img src="img/awards.png"></div>
                 <h4 class="service-heading">Pitch, Demo & Awards</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
@@ -200,6 +214,6 @@
    </section>
 
    <!-- Link to JS file -->
-   <script src="/js/main.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>
