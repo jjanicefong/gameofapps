@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <?php
-        require 'php/database.php';
-    ?>
+<?php
+    require 'php/database.php';
+    include 'php/postEvent.php';
+?>
 
 <head>
    <meta charset="UTF-8">
@@ -13,7 +14,7 @@
    <link href="css/main.css" type="text/css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="ClearInput()">
     <!-- Nav Bar -->
     <nav id="navbar" class="sticky">
         <div class="navbar-cont">
@@ -26,7 +27,7 @@
                 <!-- <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li> -->
                 <?php
                     if(isset($_POST['username'])){
-                        echo '<li class="nav-item"><span id="nav-username">'.$_POST['username'].'</span></li>';
+                        echo '<li class="nav-item"><span id="nav-username">'.$_SESSION['username'].'</span></li>';
                     }else{
                         echo '<li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>';
                     }
@@ -175,7 +176,7 @@
                             </div>
                             <br>
                             <!-- Post Button -->
-                            <button type="submit" name="create-button" class="btn-small event-btn">Post</button>
+                            <button type="submit" name="post-button" class="btn-small event-btn">Post</button>
                         </form>
                     </div>
                 </div>
@@ -239,8 +240,30 @@
                </div>
             </div>
 
+            <?php
+            // $conn = new mysqli($servername, $username, $password, "gameofapps");
+            $sql = "SELECT * FROM events;";
+            $allEvents = mysqli_query($conn, $sql);
 
-         </div>
+            if(mysqli_num_rows($allEvents) > 0){
+                while($row = mysqli_fetch_assoc($allEvents)){
+                echo '
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h4>'.$row["city"].'</h4>
+                                <p>SCHOOL DISTRICT '.$row["district"].'</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>'.$row["eventType"].'</h4>
+                                <p>'.$row["details"].'</p>
+                            </div>
+                        </div>
+                    </div>';
+                }
+            }
+            // $conn->close();
+        ?>
       </div>
    </section>
 

@@ -31,3 +31,7 @@ function ShowEventForm(status){
         console.log('close');
     }
 }
+
+function ClearInput(){
+    document.getElementsByTagName("input").value = "";
+}
