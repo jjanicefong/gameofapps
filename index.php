@@ -28,7 +28,7 @@
                 <!-- <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li> -->
                 <?php
                     if(isset($_POST['username'])){
-                        echo '<li class="nav-item"><span id="nav-username">'.$_SESSION['username'].'</span></li>';
+                        echo '<li class="nav-item"><span id="nav-username">'.$_POST['username'].'</span></li>';
                     }else{
                         echo '<li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>';
                     }
@@ -240,7 +240,7 @@
                   </div>
                </div>
             </div>
-           
+
             <?php
             // $conn = new mysqli($servername, $username, $password, "gameofapps");
             $sql = "SELECT * FROM events;";
@@ -277,16 +277,16 @@
       <div class="section-heading-cont">
          <h1 class="section-title">Make a <span class="orange-text">Donation $</span></h1>
          <h3 class="section-subtitle">We're a non-profit organization aiming to educate our future generation.</h3>
-         
+
          <!-- Form Donation -->
          <form action="#" method="POST" class="donate-form">
-            <a class="dollar-btn">$10</a>
-            <a class="dollar-btn">$20</a>
-            <a class="dollar-btn">$50</a>
-            <a class="dollar-btn">$100</a>
+            <a class="dollar-btn" data-value="10">$10</a>
+            <a class="dollar-btn" data-value="20">$20</a>
+            <a class="dollar-btn" data-value="50">$50</a>
+            <a class="dollar-btn" data-value="100">$100</a>
             <div class="other-amount">
                <input type="number" placeholder="Other Amount" id="other-input">
-            </div>   
+            </div>
             <div class="credit-details">
                <div class="cc-top-container">
                   <p class="credit-title">CREDIT PAYMENT</p>

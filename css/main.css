@@ -673,6 +673,14 @@ input {
     justify-content: stretch;
 }
 
+.name-cont > input,
+.card-num-cont > input,
+.exp-cont > input,
+.date-cont > input,
+.cvv-cont > input {
+    color: white;
+}
+
  /* ========================================================= */
  /* Contact Us Footer */
  /* ========================================================= */
