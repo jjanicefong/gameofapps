@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- PHP Code -->
 <?php
-    require 'php/database.php';
-    include 'php/postEvent.php';
+    require_once 'php/database.php';
+    require 'php/main.php';
 ?>
 
 <head>
@@ -142,6 +143,7 @@
         <h1 class="section-title">Dates & <span class="orange-text">Locations</span></h1>
         <h3 class="section-subtitle">Join us for the Season 2 showcase & championship events <br> Attend one or all of the following events to support our local high school teams!</h3>
     </div>
+
     <!-- Create Event Container -->
     <?php
     if (isset($_POST['username'])){
@@ -185,6 +187,7 @@
         }
     }
     ?>
+
       <!-- Locations -->
       <div id="location">
          <div class="location-cont">
@@ -241,30 +244,29 @@
                </div>
             </div>
 
+            <!-- Create New Event - PHP Code -->
             <?php
-            // $conn = new mysqli($servername, $username, $password, "gameofapps");
-            $sql = "SELECT * FROM events;";
-            $allEvents = mysqli_query($conn, $sql);
+                $sql = "SELECT * FROM events;";
+                $allEvents = mysqli_query($conn, $sql);
 
-            if(mysqli_num_rows($allEvents) > 0){
-                while($row = mysqli_fetch_assoc($allEvents)){
-                echo '
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h4>'.$row["city"].'</h4>
-                                <p>SCHOOL DISTRICT '.$row["district"].'</p>
+                if(mysqli_num_rows($allEvents) > 0){
+                    while($row = mysqli_fetch_assoc($allEvents)){
+                    echo '
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h4>'.$row["city"].'</h4>
+                                    <p>SCHOOL DISTRICT '.$row["district"].'</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h4>'.$row["eventType"].'</h4>
+                                    <p>'.$row["details"].'</p>
+                                </div>
                             </div>
-                            <div class="flip-card-back">
-                                <h4>'.$row["eventType"].'</h4>
-                                <p>'.$row["details"].'</p>
-                            </div>
-                        </div>
-                    </div>';
+                        </div>';
+                    }
                 }
-            }
-            // $conn->close();
-        ?>
+            ?>
       </div>
    </section>
 
