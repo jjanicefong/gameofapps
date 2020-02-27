@@ -19,10 +19,35 @@
                 <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
                 <li class="nav-item"><a href="#donate" class="nav-link">Donate</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="#" class="nav-link btn-small">Login</a></li>
+                <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <!-- Modal Content -->
+        <form action="" method="POST" class="modal-content animateZoom">
+            <div class="modal-image">
+                <!-- Close Button -->
+                <span class="close" title="Close Modal" onclick="CloseLoginModal()">&times;</span>
+                <img class="modal-logo" src="/img/goa-logo.png" alt="Game of Apps Logo">
+            </div>
+            <div class="modal-cont">
+                <!-- Username -->
+                <label class="modal-label" for="username">Username</label>
+                <input class="modal-input" type="text" placeholder="Enter Username" name="username" required>
+                <br>
+                <!-- Password -->
+                <label class="modal-label" for="password">Password</label>
+                <input class="modal-input" type="password" placeholder="Enter Password" name="password" required>
+                <br>
+                <br>
+                <!-- Login Button -->
+                <button type="submit" class="modal-button">Login</button>
+            </div>
+        </form>
+    </div>
 
     <!-- Main Hero - Header -->
     <header class="header hero-img">
