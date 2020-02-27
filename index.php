@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Game of Apps</title>
     <!-- Link to CSS file -->
-   <link href="/css/main.css" type="text/css" rel="stylesheet">
+   <link href="css/main.css" type="text/css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -17,8 +17,8 @@
                 <li class="nav-item"><a href="#page-top" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="#donate" class="nav-link">Donate</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 <li class="nav-item"><a href="#" class="nav-link btn-small">Login</a></li>
             </ul>
         </div>
@@ -66,22 +66,22 @@
         </div>
         <div class="services-cont">
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/mentors.png"></div>
+                <div class="service-img"><img src="img/mentors.png"></div>
                 <h4 class="service-heading">Industry Mentors</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/design.png"></div>
+                <div class="service-img"><img src="img/design.png"></div>
                 <h4 class="service-heading">Design Thinking</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/development.png"></div>
+                <div class="service-img"><img src="img/development.png"></div>
                 <h4 class="service-heading">Agile Software Development</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
             <div class="service-item-cont">
-                <div class="service-img"><img src="/img/awards.png"></div>
+                <div class="service-img"><img src="img/awards.png"></div>
                 <h4 class="service-heading">Pitch, Demo & Awards</h4>
                 <p class="service-text">On a weekly basis, professional designers and developers will work alongside your school team to coach you every step of the way. Additionally, learn the fundamentals of design and coding in three deep-dive workshops.</p>
             </div>
@@ -171,15 +171,46 @@
          <h3 class="section-subtitle">We're a non-profit organization aiming to educate our future generation.</h3>
          
          <!-- Form Donation -->
-         <form action="#" method="POST">
-            <a class="dollar-btn" href="#">$10</a>
-            <a class="dollar-btn" href="#">$20</a>
-            <a class="dollar-btn" href="#">$50</a>
-            <a class="dollar-btn" href="#">$100</a>
+         <form action="#" method="POST" class="donate-form">
+            <a class="dollar-btn">$10</a>
+            <a class="dollar-btn">$20</a>
+            <a class="dollar-btn">$50</a>
+            <a class="dollar-btn">$100</a>
             <div class="other-amount">
-               <input type="number" placeholder="Other Amount" class="donate-input"></input>
-               <button clear class="donate-btn">Enter</button>
+               <input type="number" placeholder="Other Amount" id="other-input">
+            </div>   
+            <div class="credit-details">
+               <div class="cc-top-container">
+                  <p class="credit-title">CREDIT PAYMENT</p>
+                  <img src="./img/visa.png" alt="Visa Logo" height="70" width="70">
+               </div>
+               <div class="cc-bot-container">
+                  <div class="cc-inp-top-cont">
+                     <div class="name-cont">
+                        <p class="credit-head">Cardholder's name</p>
+                        <input type="text" placeholder="Name" id="dark-bg">
+                     </div>
+                     <div class="card-num-cont">
+                        <p class="credit-head">Card Number</p>
+                        <input type="text" placeholder="Card Number" id="dark-bg">
+                     </div>
+                  </div>
+                  <div class="cc-inp-bot-cont">
+                     <div class="exp-cont">
+                        <div class="date-cont">
+                           <p class="credit-head">Expiry Date</p>
+                           <input type="text" placeholder="MM" id="dark-bg">
+                        </div>
+                           <input type="text" placeholder="YY" id="dark-bg">
+                     </div>
+                     <div class="cvv-cont">
+                        <p class="credit-head">CVV</p>
+                        <input type="text" placeholder="CVV" id="dark-bg">
+                     </div>
+                  </div>
+               </div>
             </div>
+            <button class="donate-btn">DONATE</button>
          </form>
      </div>
 
@@ -197,6 +228,6 @@
    </section>
 
    <!-- Link to JS file -->
-   <script src="/js/main.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>
