@@ -23,6 +23,7 @@
                 <li class="nav-item"><a href="#page-top" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="#donate" class="nav-link">Donate</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 <!-- <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li> -->
                 <?php
@@ -239,7 +240,7 @@
                   </div>
                </div>
             </div>
-
+           
             <?php
             // $conn = new mysqli($servername, $username, $password, "gameofapps");
             $sql = "SELECT * FROM events;";
@@ -265,6 +266,62 @@
             // $conn->close();
         ?>
       </div>
+   </section>
+
+         </div>
+      </div>
+   </section>
+
+   <!-- Donate -->
+   <section id="donate" class="donate">
+      <div class="section-heading-cont">
+         <h1 class="section-title">Make a <span class="orange-text">Donation $</span></h1>
+         <h3 class="section-subtitle">We're a non-profit organization aiming to educate our future generation.</h3>
+         
+         <!-- Form Donation -->
+         <form action="#" method="POST" class="donate-form">
+            <a class="dollar-btn">$10</a>
+            <a class="dollar-btn">$20</a>
+            <a class="dollar-btn">$50</a>
+            <a class="dollar-btn">$100</a>
+            <div class="other-amount">
+               <input type="number" placeholder="Other Amount" id="other-input">
+            </div>   
+            <div class="credit-details">
+               <div class="cc-top-container">
+                  <p class="credit-title">CREDIT PAYMENT</p>
+                  <img src="./img/visa.png" alt="Visa Logo" height="70" width="70">
+               </div>
+               <div class="cc-bot-container">
+                  <div class="cc-inp-top-cont">
+                     <div class="name-cont">
+                        <p class="credit-head">Cardholder's name</p>
+                        <input type="text" placeholder="Name" id="dark-bg">
+                     </div>
+                     <div class="card-num-cont">
+                        <p class="credit-head">Card Number</p>
+                        <input type="text" placeholder="Card Number" id="dark-bg">
+                     </div>
+                  </div>
+                  <div class="cc-inp-bot-cont">
+                     <div class="exp-cont">
+                        <div class="date-cont">
+                           <p class="credit-head">Expiry Date</p>
+                           <input type="text" placeholder="MM" id="dark-bg">
+                        </div>
+                           <input type="text" placeholder="YY" id="dark-bg">
+                     </div>
+                     <div class="cvv-cont">
+                        <p class="credit-head">CVV</p>
+                        <input type="text" placeholder="CVV" id="dark-bg">
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <button class="donate-btn">DONATE</button>
+         </form>
+     </div>
+
    </section>
 
    <!-- Footer Contact -->
