@@ -7,6 +7,10 @@
    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -373,3 +377,168 @@ a {
     color: white;
     transform: rotateY(180deg);
   }
+
+ /* ========================================================= */
+ /* Donate */
+ /* ========================================================= */
+.other-amount {
+    position: relative;
+    margin-top: 6em;
+    background-color: white;
+}
+
+#other-input {
+    width: 200px;
+    height: 5vh;
+}
+
+.donate-btn {
+    font-size: 1.2em;
+    color: #fff;
+    border: none;
+    background-color: #ff8f4f;
+    padding: 15px 25px;
+    width: 30vw;
+    border-radius: 0.5em;
+}
+
+.donate-btn:hover {
+    color: white !important;
+    background-color: #343a40;
+}
+
+.dollar-btn {
+    font-size: 1.2em;
+    color: #fff;
+
+    background-color:#343a40;
+    border-radius: 0.5em;
+    padding: 15px 25px;
+    position: relative;
+    top: 3em; 
+    margin: .5em;
+}
+
+.dollar-btn:hover {
+    color: white !important;
+    background-color: #ff8f4f;
+}
+
+.credit-details{
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    flex-wrap: nowrap;
+    margin: 50px 30vw;
+}
+
+.credit-head {
+    text-align: left;
+    padding: 10px;
+    color: white;
+}
+
+.credit-title {
+    padding-bottom: 1.5em;
+}
+
+.cc-top-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px gray;
+    margin: 1em;
+}
+
+.cc-bot-container{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.cc-inp-top-cont, .cc-inp-bot-cont{
+    display: flex;
+    margin: 1em;
+}
+
+.name-cont, .card-num-cont{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.exp-cont{
+    display: flex;
+    flex: 2;
+    align-items: flex-end;
+}
+
+.exp-cont > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.padding-title {
+    margin-top: 2em;
+}
+
+.cvv-cont{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: .5em;
+    border: solid 1px lightgrey;
+    margin-bottom: 5px;
+    margin: 5px;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+#dark-bg {
+    background-color:  #343a40;
+}
+
+.input-stretch {
+    justify-content: stretch;
+}
+
+ /* ========================================================= */
+ /* Contact Us Footer */
+ /* ========================================================= */
+
+ .footer {
+     background-color: #f79e6b;
+     position: relative;
+     bottom:0;
+     padding: 2em;
+ }
+
+ .send-btn {
+    font-size: 1.2em;
+    color: #fff;
+
+    background-color:#343a40;
+    border-radius: 0.5em;
+    padding: 15px 25px;
+    position: relative;
+    top: 3em;
+}
+
+.send-btn:hover {
+    color: white !important;
+    background-color: #ff8f4f;
+}
+
+
