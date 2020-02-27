@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+    require 'php/database.php';
+    include 'php/postEvent.php';
+?>
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +14,7 @@
    <link href="css/main.css" type="text/css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="ClearInput()">
     <!-- Nav Bar -->
     <nav id="navbar" class="sticky">
         <div class="navbar-cont">
@@ -19,7 +25,14 @@
                 <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
                 <li class="nav-item"><a href="#donate" class="nav-link">Donate</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>
+                <!-- <li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li> -->
+                <?php
+                    if(isset($_POST['username'])){
+                        echo '<li class="nav-item"><span id="nav-username">'.$_SESSION['username'].'</span></li>';
+                    }else{
+                        echo '<li class="nav-item"><a href="#" class="nav-link btn-small" onclick="ShowLoginModal()">Login</a></li>';
+                    }
+                ?>
             </ul>
         </div>
     </nav>
@@ -31,7 +44,7 @@
             <div class="modal-image">
                 <!-- Close Button -->
                 <span class="close" title="Close Modal" onclick="CloseLoginModal()">&times;</span>
-                <img class="modal-logo" src="/img/goa-logo.png" alt="Game of Apps Logo">
+                <img class="modal-logo" src="img/goa-logo.png" alt="Game of Apps Logo">
             </div>
             <div class="modal-cont">
                 <!-- Username -->
@@ -44,7 +57,9 @@
                 <br>
                 <br>
                 <!-- Login Button -->
-                <button type="submit" class="modal-button">Login</button>
+                <button type="submit" class="modal-button" name="login-button">Login</button>
+                <!-- Signup Button -->
+                <button type="submit" class="modal-button signup-button" name="signup-button">Sign Up</button>
             </div>
         </form>
     </div>
@@ -115,23 +130,65 @@
 
   <!-- Events -->
    <section id="events">
-      <!-- Image -->
-      <div class="events event-img">
-         <div class="page-cont">
-            <div class="header-title">Upcoming Events</div>
-         </div>
-      </div>
+    <!-- Image -->
+    <div class="events event-img">
+        <div class="page-cont">
+        <div class="header-title">Upcoming Events</div>
+        </div>
+    </div>
 
-      <!-- Container -->
-      <div class="section-heading-cont event-head">
-         <h1 class="section-title">Dates & <span class="orange-text">Locations</span></h1>
-         <h3 class="section-subtitle">Join us for the Season 2 showcase & championship events <br> Attend one or all of the following events to support our local high school teams!</h3>
-      </div>
-
+    <!-- Container -->
+    <div class="section-heading-cont event-head">
+        <h1 class="section-title">Dates & <span class="orange-text">Locations</span></h1>
+        <h3 class="section-subtitle">Join us for the Season 2 showcase & championship events <br> Attend one or all of the following events to support our local high school teams!</h3>
+    </div>
+    <!-- Create Event Container -->
+    <?php
+    if (isset($_POST['username'])){
+        // Admin Account - Show event form
+        if($_POST['username'] == "admin"){
+            echo '<div class="section-heading-cont">
+                <!-- Create Event Button -->
+                <a class="header-btn" onclick="ShowEventForm(this)" data-status="open" id="createEvent-btn">Create Event</a>
+                <!-- Create Event Form -->
+                <br>
+                <div id="event-form-cont">
+                    <div class="event-form">
+                        <form action="" method="POST">
+                            <div class="event-field">
+                                <!-- City -->
+                                <label class="event-label" for="city">City</label>
+                                <input class="event-input" type="text" placeholder="Enter City Name" name="city" required>
+                            </div>
+                            <div class="event-field">
+                                <!-- School District # -->
+                                <label class="event-label" for="district">School District #</label>
+                                <input class="event-input" type="number" placeholder="Enter School District #" name="district" required>
+                            </div>
+                            <div class="event-field">
+                                <!-- Event Type -->
+                                <label class="event-label" for="event-type">Event Type</label>
+                                <input class="event-input" type="text" placeholder="Enter Event Type" name="event-type" required>
+                            </div>
+                            <div class="event-field">
+                                <!-- Details -->
+                                <label class="event-label" for="details">Date, Time & Location</label>
+                                <input class="event-input" type="text" placeholder="Enter Event Details" name="details" required>
+                            </div>
+                            <br>
+                            <!-- Post Button -->
+                            <button type="submit" name="post-button" class="btn-small event-btn">Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>';
+        }
+    }
+    ?>
       <!-- Locations -->
       <div id="location">
          <div class="location-cont">
-            <!-- cards  -->
+            <!-- Cards  -->
             <div class="flip-card">
                <div class="flip-card-inner">
                   <div class="flip-card-front">
@@ -183,7 +240,33 @@
                   </div>
                </div>
             </div>
+           
+            <?php
+            // $conn = new mysqli($servername, $username, $password, "gameofapps");
+            $sql = "SELECT * FROM events;";
+            $allEvents = mysqli_query($conn, $sql);
 
+            if(mysqli_num_rows($allEvents) > 0){
+                while($row = mysqli_fetch_assoc($allEvents)){
+                echo '
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h4>'.$row["city"].'</h4>
+                                <p>SCHOOL DISTRICT '.$row["district"].'</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>'.$row["eventType"].'</h4>
+                                <p>'.$row["details"].'</p>
+                            </div>
+                        </div>
+                    </div>';
+                }
+            }
+            // $conn->close();
+        ?>
+      </div>
+   </section>
 
          </div>
       </div>
